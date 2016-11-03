@@ -1,4 +1,5 @@
-function [U, V, J_history] = GradientDescent(R,S,theta,alpha,lambda_U,lambda_V,K,l,num_iters)
+function [U, V, J_history] = SocialPMF(R,S,theta,alpha,lambda_U,lambda_V,K,l,num_iters)
+% Probabilitic Matrix Factorization with Social Trust Information
 % CopyRight @ Jinfeng Rao 2013/04/24
 % Input:
 % R : rating matrix, with m users and n movies 
@@ -15,7 +16,7 @@ function [U, V, J_history] = GradientDescent(R,S,theta,alpha,lambda_U,lambda_V,K
 % V : item latent matrix, n*l dimensional
 % J_history : cost function value in each iteration
 
-% 把参数和实验结果写入文件
+% 鎶婂弬鏁板拰瀹為獙缁撴灉鍐欏叆鏂囦欢
 fid = fopen('D:\ThesisData\code\alpha2.txt','a+');
 fprintf(fid,'%s%6.4f %s%d %s%d\r\n','theta = ',theta,'K = ',K,'l = ',l);
 fprintf(fid,'%s %2.1f\r\n','alpha = ',alpha);
